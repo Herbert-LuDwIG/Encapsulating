@@ -97,19 +97,24 @@ public class Metodes {
 	
 	public static void select(Students[] studentuMas) {
 
+		String[] SMTH = new String[studentuMas.length];
+		
 		for(int i = 0; i < studentuMas.length; i++) {
 			if(studentuMas[i] != null) {
-				JOptionPane.showMessageDialog(null, 
-				"Students: " + studentuMas[i].getVards() + " " + studentuMas[i].getUzvards() 
-				+ "\nStudenta apliecības nr.: " + studentuMas[i].getAplNr()
-				+ "\nTālrunis: " + studentuMas[i].getTalr()
-				+ "\nPersonas kods: " + studentuMas[i].getPersKods()
-				+ "\nStudiju programma: " + studentuMas[i].getStudProg() + " kurss: " + studentuMas[i].getKurss()
-				+ "\nValsts finansējums: " + studentuMas[i].isValstsFin()
-				+ "\nSaņem stipensiju: " + studentuMas[i].isSanemStip());
+				SMTH[i] =  
+				studentuMas[i].getVards() + " " + studentuMas[i].getUzvards() + " "+ studentuMas[i].getStudProg() + " " +  studentuMas[i].getKurss() + ". kurss";
 			}
 		}
 		
+		String selected = (String) JOptionPane.showInputDialog(
+	            null,
+	            "Studentu saraksts",
+	            "Saraksts",
+	            JOptionPane.QUESTION_MESSAGE,
+	            null,
+	            SMTH,
+	            SMTH
+	    );
 	   
 	}// select
 	

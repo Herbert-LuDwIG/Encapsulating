@@ -29,6 +29,7 @@ public class Augstskola {
 			switch(izvelne) {
 			// case Jauns students
 			case "Jauns students" :
+				
 				persona = new Students();
 				String vards = Metodes.virknesParbaude("Studenta vārds: ", "Pēteris");
 				if (vards == null)
