@@ -117,8 +117,12 @@ public class Augstskola {
 				Metodes.select(studentuMas);
 				break;
 				
+			case "Aizvērt programmu":
+				JOptionPane.showMessageDialog(null, "Bye!", "Bye!", JOptionPane.PLAIN_MESSAGE);
 				
+				Serializacija.Serializet(studentuMas, fNosaukums);
 				
+				break;
 			}// switch
 		} while(!izvelne.equals(darbibas[darbibas.length-1]));
 
