@@ -117,6 +117,8 @@ public class Augstskola {
 				Metodes.select(studentuMas);
 				break;
 				
+				
+				
 			}// switch
 		} while(!izvelne.equals(darbibas[darbibas.length-1]));
 
