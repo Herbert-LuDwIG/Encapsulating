@@ -19,7 +19,7 @@ public class Augstskola {
 		
 		//Izsaukt deserializāciju
 		int id = 0;
-		
+		studentuMas = Serializacija.Deserializet(fNosaukums);
 		do {
 			izvelne = (String) JOptionPane.showInputDialog(null, "Izvēlies darbību", "Darbības izvēle", 
 					JOptionPane.QUESTION_MESSAGE, null, darbibas, darbibas[0]);
@@ -116,6 +116,31 @@ public class Augstskola {
 			case "Studentu saraksts":
 				Metodes.select(studentuMas);
 				break;
+				
+			case "Budžeta vietas":
+				int kuruBudVieta = Metodes.meklet(studentuMas, JOptionPane.showInputDialog(null, "Apliecības nr.: "));
+				if(kuruBudVieta != -1) {
+				String[] BudViet = {"Studentam ir jāmaksā par studiju", "Studentam nav jāmaksā par studiju"};
+					
+				String bl = (String) JOptionPane.showInputDialog(null, "Vai studentam ir jāmaksā par studiju?", "Izvēlies",
+						JOptionPane.QUESTION_MESSAGE, null, BudViet, BudViet[0]);
+				
+				switch(bl) {
+				case "Studentam ir jāmaksā par studiju": studentuMas[kuruBudVieta].setValstsFin(false);
+														JOptionPane.showMessageDialog(null, studentuMas[kuruBudVieta].getVards() + " tagad ir jāmaksa par studiju programmu");
+														break;
+				case "Studentam nav jāmaksā par studiju": studentuMas[kuruBudVieta].setValstsFin(true);
+				JOptionPane.showMessageDialog(null, studentuMas[kuruBudVieta].getVards() + " tagad studiju rogramma ir bezmaksas!");
+				break;
+				
+				}
+				
+				}
+				break;
+				
+			case "Stipendijas":
+				break;
+				
 				
 			case "Aizvērt programmu":
 				JOptionPane.showMessageDialog(null, "Bye!", "Bye!", JOptionPane.PLAIN_MESSAGE);

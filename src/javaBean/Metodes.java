@@ -113,7 +113,6 @@ public class Metodes {
 	            JOptionPane.QUESTION_MESSAGE,
 	            null,
 	            SMTH,
-	            
 	            SMTH
 	    );
 	   

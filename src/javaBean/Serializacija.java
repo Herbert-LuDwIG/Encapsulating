@@ -11,6 +11,8 @@ import javax.swing.JOptionPane;
 
 public class Serializacija {
 	
+	
+	
 	// ========== Serializācija ==========
 	static void Serializet(Students[] studentuMas, String fName) {
 		try {
@@ -25,6 +27,8 @@ public class Serializacija {
 			JOptionPane.showMessageDialog(null, "Kļūda serializējot datus!" + io, "Kļūda", JOptionPane.ERROR_MESSAGE);
 		}
 	}// Serializacija
+	
+	
 	
 	
 	
